@@ -138,7 +138,6 @@ window.PORTFOLIO = {
     // ------------------------------------------------------- Environments
     {
       id: "thedust",
-      hidden: true, // waiting for map captures
       section: "environments",
       title: "The Dust II",
       subtitle: "Map remake built from scratch · Unity",
@@ -147,13 +146,12 @@ window.PORTFOLIO = {
       description:
         "A remake of the original Counter-Strike Dust II map, built from the ground up in Unity, playable with collisions throughout the level.",
       blocks: [
-        { type: "video", src: "media/thedust/walkthrough.mp4", poster: "media/thedust/cover.jpg", caption: "Walkthrough" },
-        { type: "images", columns: 2, items: ["media/thedust/shot1.jpg", "media/thedust/shot2.jpg", "media/thedust/shot3.jpg", "media/thedust/shot4.jpg"] },
+        { type: "video", src: "media/thedust/walkthrough.mp4", poster: "media/thedust/shot4.jpg", caption: "Walkthrough" },
+        { type: "images", columns: 2, items: ["media/thedust/shot1.jpg", "media/thedust/shot2.jpg", "media/thedust/shot3.jpg", "media/thedust/shot4.jpg"], caption: "In-game screenshots" },
       ],
     },
     {
       id: "greentavern",
-      hidden: true, // waiting for map captures
       section: "environments",
       title: "Green Tavern",
       subtitle: "Medieval tavern built from scratch · Unity",
@@ -161,8 +159,8 @@ window.PORTFOLIO = {
       tools: ["Unity"],
       description: "A medieval tavern interior, modelled and set up from scratch and lit in Unity.",
       blocks: [
-        { type: "video", src: "media/greentavern/walkthrough.mp4", poster: "media/greentavern/cover.jpg", caption: "Walkthrough" },
-        { type: "images", columns: 2, items: ["media/greentavern/shot1.jpg", "media/greentavern/shot2.jpg", "media/greentavern/shot3.jpg", "media/greentavern/shot4.jpg"] },
+        { type: "images", columns: 1, items: ["media/greentavern/shot1.jpg"] },
+        { type: "images", columns: 2, items: ["media/greentavern/shot2.jpg", "media/greentavern/shot3.jpg", "media/greentavern/shot4.jpg", "media/greentavern/shot5.jpg"], caption: "In-game screenshots" },
       ],
     },
 
