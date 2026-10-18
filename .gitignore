@@ -1,0 +1,5 @@
+# Local only: never upload to GitHub
+Idea Portfolio.txt
+*.txt
+_phone.html
+_measure.html
