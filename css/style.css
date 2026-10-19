@@ -96,7 +96,7 @@ h1, h2, h3 { font-family: var(--font-head); line-height: 1.1; margin: 0; letter-
 
 /* ----------------------------------------------------------- contact */
 .contact { max-width: 720px; margin: 0 auto; padding: clamp(72px, 10vw, 140px) var(--gutter); text-align: center; }
-.contact h2 { font-size: clamp(32px, 5vw, 56px); }
+.contact h2 { font-size: clamp(32px, 5vw, 56px); margin-bottom: 28px; }
 .contact p { color: var(--muted); margin: 12px 0 28px; }
 .contact .btn { word-break: break-all; }
 .links { list-style: none; padding: 0; margin: 24px 0 0; display: flex; justify-content: center; gap: 20px; }

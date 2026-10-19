@@ -39,11 +39,13 @@ window.PORTFOLIO = {
   sections: [
     { id: "characters", title: "3D Characters", blurb: "Game-ready characters: sculpt, retopology, texturing, rigging and animation." },
     { id: "environments", title: "Environments", blurb: "Levels built from scratch and lit in Unity." },
-    { id: "2d", title: "2D Art", blurb: "Pixel-art characters, creatures and backgrounds." },
+    { id: "2d", title: "2D Art", blurb: "Pixel-art characters, creatures, backgrounds and tilesets." },
+    { id: "design", title: "Game Design", blurb: "Board and tabletop game design." },
   ],
 
   projects: [
     // ------------------------------------------------------------------ 3D
+    // Oldest to newest (Carla, 2026-10-19).
     {
       id: "rihanna",
       section: "characters",
@@ -58,8 +60,7 @@ window.PORTFOLIO = {
         { type: "video", src: "media/rihanna/turntable.mp4", poster: "media/rihanna/front.webp", caption: "Turntable" },
         { type: "images", columns: 4, items: ["media/rihanna/front.webp", "media/rihanna/threequarter.webp", "media/rihanna/side.webp", "media/rihanna/back.webp"], caption: "Front · three-quarter · side · back" },
       ],
-    },
-    {
+    },    {
       id: "will",
       section: "characters",
       title: "Will Smith — Anatomy Study",
@@ -74,21 +75,44 @@ window.PORTFOLIO = {
         { type: "images", columns: 4, items: ["media/will/front.webp", "media/will/threequarter.webp", "media/will/side.webp", "media/will/back.webp"], caption: "Textured low poly" },
         { type: "images", columns: 4, items: ["media/will/clay_front.webp", "media/will/clay_threequarter.webp", "media/will/clay_side.webp", "media/will/clay_back.webp"], caption: "High-poly sculpt" },
       ],
-    },
-    {
-      id: "elvis",
+    },    {
+      id: "spacetrooper",
       section: "characters",
-      title: "Elvis",
-      subtitle: "Creature · rigged and animated",
-      cover: "media/elvis/threequarter.webp",
-      tools: ["Blender"],
+      title: "Space Trooper",
+      subtitle: "Character animation · Unity",
+      cover: "media/spacetrooper/cover.jpg",
+      tools: ["Unity"],
       description:
-        "Monster from the same universe as Gus. Game-ready creature: high-poly sculpt baked down to a low-poly mesh, textured, rigged and animated with a full gameplay set (idle, alert, walk, run, run-attack and kill). Pick an animation below the viewer.",
+        "Animation and integration of a sci-fi trooper in Unity: locomotion, jumping, peeking around cover, shooting and hit reactions, with and without weapon.",
       blocks: [
-        { type: "model", src: "media/elvis/elvis.glb", poster: "media/elvis/front.webp", animated: true, fov: "15deg" },
-        { type: "video", src: "media/elvis/turntable.mp4", poster: "media/elvis/front.webp", caption: "Turntable with idle animation" },
-        { type: "images", columns: 4, items: ["media/elvis/front.webp", "media/elvis/threequarter.webp", "media/elvis/side.webp", "media/elvis/back.webp"], caption: "Textured low poly" },
-        { type: "images", columns: 4, items: ["media/elvis/clay_front.webp", "media/elvis/clay_threequarter.webp", "media/elvis/clay_side.webp", "media/elvis/clay_back.webp"], caption: "High-poly sculpt" },
+        { type: "video", src: "media/spacetrooper/cinematic.mp4", poster: "media/spacetrooper/cover.jpg", caption: "In-engine cinematic" },
+        { type: "video", src: "media/spacetrooper/weapon_set.mp4", poster: "media/spacetrooper/weapon_poster.jpg", caption: "Animation set — armed" },
+      ],
+    },    {
+      id: "fighter",
+      section: "characters",
+      title: "Fighter",
+      subtitle: "Combat animation set",
+      cover: "media/fighter/cover.jpg",
+      tools: [],
+      description:
+        "Combat animation set for a fighting character: fighting idles, idle breaks, walk, boxing punches and combos, MMA and armada kicks, hit reactions and death.",
+      blocks: [
+        { type: "video", src: "media/fighter/fighter_animations.mp4", poster: "media/fighter/cover.jpg", caption: "Animation reel" },
+      ],
+    },    {
+      id: "sectarios",
+      section: "characters",
+      title: "Sectarios",
+      subtitle: "Three cultists · rigged, posed as a group",
+      cover: "media/sectarios/cover.webp",
+      tools: [],
+      description:
+        "Three hooded cultists in deer-skull masks, each built on its own rig, shown together in a single group pose: the leader invoking with raised arms, one pointing at the viewer and one bowing with open arms.",
+      blocks: [
+        { type: "model", src: "media/sectarios/sectarios.glb", poster: "media/sectarios/front.webp" },
+        { type: "video", src: "media/sectarios/turntable.mp4", poster: "media/sectarios/front.webp", caption: "Turntable" },
+        { type: "images", columns: 2, items: ["media/sectarios/front.webp", "media/sectarios/threequarter.webp", "media/sectarios/side.webp", "media/sectarios/back.webp"], caption: "Front · three-quarter · side · back" },
       ],
     },
     {
@@ -106,35 +130,22 @@ window.PORTFOLIO = {
         { type: "images", columns: 4, items: ["media/gus/front.webp", "media/gus/threequarter.webp", "media/gus/side.webp", "media/gus/back.webp"], caption: "Textured low poly" },
         { type: "images", columns: 4, items: ["media/gus/clay_front.webp", "media/gus/clay_threequarter.webp", "media/gus/clay_side.webp", "media/gus/clay_back.webp"], caption: "High-poly sculpt" },
       ],
-    },
-    {
-      id: "spacetrooper",
+    },    {
+      id: "elvis",
       section: "characters",
-      title: "Space Trooper",
-      subtitle: "Character animation · Unity",
-      cover: "media/spacetrooper/cover.jpg",
-      tools: ["Unity"],
+      title: "Elvis",
+      subtitle: "Creature · rigged and animated",
+      cover: "media/elvis/threequarter.webp",
+      tools: ["Blender"],
       description:
-        "Animation and integration of a sci-fi trooper in Unity: locomotion, jumping, peeking around cover, shooting and hit reactions, with and without weapon.",
+        "Monster from the same universe as Gus. Game-ready creature: high-poly sculpt baked down to a low-poly mesh, textured, rigged and animated with a full gameplay set (idle, alert, walk, run, run-attack and kill). Pick an animation below the viewer.",
       blocks: [
-        { type: "video", src: "media/spacetrooper/cinematic.mp4", poster: "media/spacetrooper/cover.jpg", caption: "In-engine cinematic" },
-        { type: "video", src: "media/spacetrooper/weapon_set.mp4", poster: "media/spacetrooper/weapon_poster.jpg", caption: "Animation set — armed" },
+        { type: "model", src: "media/elvis/elvis.glb", poster: "media/elvis/front.webp", animated: true, fov: "15deg" },
+        { type: "video", src: "media/elvis/turntable.mp4", poster: "media/elvis/front.webp", caption: "Turntable with idle animation" },
+        { type: "images", columns: 4, items: ["media/elvis/front.webp", "media/elvis/threequarter.webp", "media/elvis/side.webp", "media/elvis/back.webp"], caption: "Textured low poly" },
+        { type: "images", columns: 4, items: ["media/elvis/clay_front.webp", "media/elvis/clay_threequarter.webp", "media/elvis/clay_side.webp", "media/elvis/clay_back.webp"], caption: "High-poly sculpt" },
       ],
     },
-    {
-      id: "fighter",
-      section: "characters",
-      title: "Fighter",
-      subtitle: "Combat animation set",
-      cover: "media/fighter/cover.jpg",
-      tools: [],
-      description:
-        "Combat animation set for a fighting character: fighting idles, idle breaks, walk, boxing punches and combos, MMA and armada kicks, hit reactions and death.",
-      blocks: [
-        { type: "video", src: "media/fighter/fighter_animations.mp4", poster: "media/fighter/cover.jpg", caption: "Animation reel" },
-      ],
-    },
-
     // ------------------------------------------------------- Environments
     {
       id: "thedust",
@@ -186,10 +197,12 @@ window.PORTFOLIO = {
         { type: "pixel", columns: 1, items: ["media/2d/chars/turnaround_naia.png"] },
         { type: "pixel", columns: 2, items: ["media/2d/chars/naia_chat.png", "media/2d/chars/naia_crying.png"] },
         { type: "text", title: "Creatures", body: "Animated sprite sheets." },
-        { type: "sprite", src: "media/2d/sprites/boar_run.png", frames: 10, fps: 12, caption: "Wild boar — run" },
-        { type: "sprite", src: "media/2d/sprites/boar_charge.png", frames: 10, fps: 12, caption: "Wild boar — charge" },
+        { type: "sprite", src: "media/2d/sprites/boar_run.png", frames: 5, fps: 10, caption: "Wild boar — run" },
+        { type: "sprite", src: "media/2d/sprites/boar_charge.png", frames: 5, fps: 10, caption: "Wild boar — charge" },
+        { type: "pixel", columns: 1, items: ["media/2d/sprites/boar_run.png", "media/2d/sprites/boar_charge.png"], caption: "Wild boar sprite sheets — run · charge" },
         { type: "sprite", src: "media/2d/sprites/owl_idle.png", frames: 4, fps: 6, caption: "Owl — idle" },
         { type: "sprite", src: "media/2d/sprites/owl_attack.png", frames: 9, fps: 12, caption: "Owl — attack" },
+        { type: "pixel", columns: 1, items: ["media/2d/sprites/owl_idle.png", "media/2d/sprites/owl_attack.png"], caption: "Owl sprite sheets — idle · attack" },
         { type: "text", title: "Secondary characters", body: "Turnaround sheets and portraits." },
         { type: "pixel", columns: 1, items: ["media/2d/chars/turnaround_emil.png"] },
         { type: "pixel", columns: 1, items: ["media/2d/chars/turnaround_caffey.png"] },
@@ -198,6 +211,39 @@ window.PORTFOLIO = {
         { type: "pixel", columns: 3, items: ["media/2d/chars/emil.png", "media/2d/chars/caffey.png", "media/2d/chars/isabel.png"] },
         { type: "pixel", columns: 2, items: ["media/2d/chars/agusti.png", "media/2d/chars/agusti_angry.png"] },
         { type: "video", src: "media/2d/mini_artbook.mp4", poster: "media/2d/artbook_poster.jpg", caption: "Mini artbook" },
+      ],
+    },
+    {
+      id: "yggdrasil",
+      section: "2d",
+      title: "Yggdrasil — Hex Tiles",
+      subtitle: "Pixel-art tileset for a turn-based RPG",
+      cover: "media/yggdrasil/cover.png",
+      pixelCover: true,
+      tools: [],
+      description:
+        "Hexagonal 64×64 pixel-art tiles for a turn-based fighting RPG based on Norse mythology: grass and sand variations, shallow coastal water, deep sea and lake water. The water tiles sit lower than the land, so the earth edge shows along every shore. Below, the tiles assembled into small island maps.",
+      blocks: [
+        { type: "pixel", columns: 1, items: ["media/yggdrasil/archipelago.png"], caption: "Archipelago" },
+        { type: "pixel", columns: 2, items: ["media/yggdrasil/island.png", "media/yggdrasil/twinisles.png"], caption: "Lake island · twin isles" },
+        { type: "pixel", columns: 3, items: ["media/yggdrasil/tilesheet.png"], caption: "Tile sheet" },
+      ],
+    },
+
+    // ------------------------------------------------------------- Design
+    {
+      id: "relics",
+      section: "design",
+      title: "Relics",
+      subtitle: "Board game · rulebook design",
+      cover: "media/relics/cover.webp",
+      tools: [],
+      description:
+        "Relics is a negotiation board game designed as a group project: collectors trade, buy and sell objects to be the first to complete seven collection goals. Shown here is the rulebook, a tri-fold leaflet printed on both sides (written in Spanish).",
+      blocks: [
+        { type: "images", columns: 1, items: ["media/relics/side1.webp"], caption: "Outside: cover, set-up, other rules and glossary" },
+        { type: "images", columns: 1, items: ["media/relics/side2.webp"], caption: "Inside: overview, components, turn sequence and end of game" },
+        { type: "download", href: "media/relics/relics_rulebook.pdf", label: "Open the rulebook (PDF)", note: "Spanish · 2 pages, folds into three panels" },
       ],
     },
   ],
