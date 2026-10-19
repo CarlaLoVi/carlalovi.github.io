@@ -87,7 +87,7 @@ window.PORTFOLIO = {
       title: "Sectarios",
       subtitle: "Three cultists · rigged, posed as a group",
       cover: "media/sectarios/cover.webp",
-      tools: [],
+      tools: ["Blender"],
       description:
         "Three hooded cultists in deer-skull masks, each built on its own rig, shown together in a single group pose: the leader invoking with raised arms, one pointing at the viewer and one bowing with open arms.",
       blocks: [
