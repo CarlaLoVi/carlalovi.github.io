@@ -25,6 +25,7 @@
     $$("[data-artist-name]").forEach((n) => (n.textContent = a.name));
     $$("[data-artist-role]").forEach((n) => (n.textContent = a.role));
     $$("[data-artist-intro]").forEach((n) => (n.textContent = a.intro));
+    $$("[data-artist-education]").forEach((n) => (n.textContent = a.education || ""));
     $$("[data-year]").forEach((n) => (n.textContent = new Date().getFullYear()));
     $$("[data-hero-image]").forEach((n) => {
       if (a.heroImage) n.src = a.heroImage;
@@ -59,7 +60,7 @@
       const items = projects.filter((p) => p.section === s.id);
       if (!items.length) return;
       root.append(
-        el("section", { class: "work", id: s.id }, [
+        el("section", { class: "work" + (s.pixelFont ? " pixel-font" : ""), id: s.id }, [
           el("div", { class: "section-head" }, [el("h2", { text: s.title }), el("p", { text: s.blurb || "" })]),
           el("div", { class: "grid" }, items.map(card)),
         ])
@@ -192,6 +193,7 @@
     const p = projects[i];
     const section = data.sections.find((s) => s.id === p.section);
     document.title = `${p.title} — ${data.artist.name}`;
+    if (section && section.pixelFont) root.classList.add("pixel-font");
 
     root.append(
       el("div", { class: "project-head" }, [

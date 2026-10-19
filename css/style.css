@@ -13,6 +13,7 @@
   --max: 1280px;
   --font-head: "Space Grotesk", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
+  --font-pixel: "Pixelify Sans", var(--font-head);
   color-scheme: dark;
 }
 
@@ -55,7 +56,9 @@ h1, h2, h3 { font-family: var(--font-head); line-height: 1.1; margin: 0; letter-
 .hero.no-art { grid-template-columns: minmax(0, 1fr); min-height: min(64vh, 620px); }
 .eyebrow { color: var(--accent); font: 500 14px var(--font-body); letter-spacing: .08em; text-transform: uppercase; margin: 0 0 16px; }
 .hero h1 { font-size: clamp(44px, 8vw, 104px); font-weight: 700; }
-.hero-intro { color: var(--muted); font-size: clamp(16px, 1.6vw, 19px); max-width: 34em; margin: 24px 0 32px; }
+.hero-intro { color: var(--muted); font-size: clamp(16px, 1.6vw, 19px); max-width: 34em; margin: 24px 0 12px; }
+.hero-edu { color: var(--text); font-size: 15px; max-width: 40em; margin: 0 0 32px; }
+.hero-edu:empty { display: none; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 .hero > * { min-width: 0; }
 .hero-art {
@@ -204,3 +207,8 @@ figcaption { color: var(--muted); font-size: 14px; margin-top: 10px; text-align:
   * { transition: none !important; scroll-behavior: auto !important; }
   .sprite { animation-duration: 0s; }
 }
+
+/* ---------------------------------------------- pixel font (2D section) */
+.pixel-font, .pixel-font h1, .pixel-font h2, .pixel-font h3,
+.pixel-font .btn, .pixel-font figcaption { font-family: var(--font-pixel); letter-spacing: 0; }
+.pixel-font h1, .pixel-font h2, .pixel-font h3 { font-weight: 600; }
